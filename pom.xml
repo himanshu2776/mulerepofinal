@@ -48,7 +48,17 @@
                             <goal>deploy-file</goal>
                         </goals>
                         <configuration>
-                          
+                         <cloudHubDeployment>
+
+      <muleVersion>4.3.0</muleVersion>
+      <username>hexa</username>
+      <password>Printout452009</password>
+      <applicationName>democode</applicationName>
+      <environment>Sandbox</environment>
+	  <workers>1</workers>
+	  <workerType>Micro</workerType>
+  </cloudHubDeployment>
+  
                         </configuration>
                     </execution>
                 </executions>
