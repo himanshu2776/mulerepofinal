@@ -6,7 +6,6 @@
 	<artifactId>test_demo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>mule-application</packaging>
-
 	<name>test_demo</name>
 
 
