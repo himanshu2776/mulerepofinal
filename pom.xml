@@ -35,7 +35,7 @@
 				<environment>Sandbox</environment>
 				<workers>1</workers>
 				<workerType>Micro</workerType>
-				<applicationName>testDemo</applicationName>
+				<applicationName>test-Demo</applicationName>
 				<password>Printout452009</password>
 				<muleVersion>4.3.0</muleVersion>
 				</cloudHubDeployment>
