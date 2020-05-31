@@ -21,7 +21,7 @@
  
     <build>
         <plugins>
-       <!-- <plugin>
+       <plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-app-maven-plugin</artifactId>
 				<version>${mule.tools.version}</version>
@@ -29,7 +29,7 @@
 				<configuration>
                     <copyToAppsDirectory>true</copyToAppsDirectory>
 				</configuration>
-			</plugin> -->
+			</plugin>
 			
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
