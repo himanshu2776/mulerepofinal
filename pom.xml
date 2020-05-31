@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.company</groupId>
-    <artifactId>custpol1</artifactId>
-    <version>2.0.0</version>
+    <artifactId>custpol2</artifactId>
+    <version>3.0.0</version>
 
-    <name>custpol1</name>
-    <description>custpol1</description>
+    <name>custpol2</name>
+    <description>custpol2</description>
 
     <packaging>jar</packaging>
 
@@ -54,7 +54,7 @@
       <muleVersion>4.3.0</muleVersion>
       <username>hexa</username>
       <password>Printout452009</password>
-      <applicationName>custpol1</applicationName>
+      <applicationName>custpol2</applicationName>
       <environment>Sandbox</environment>
 	  <workers>1</workers>
 	  <workerType>Micro</workerType>
