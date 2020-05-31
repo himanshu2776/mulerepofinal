@@ -6,7 +6,7 @@
     <groupId>com.company</groupId>
     <artifactId>jenkinsdemoapp</artifactId>
     <version>1.0.0</version>
-	<packaging>jar</packaging>
+	<packaging>mule-application</packaging>
 
     <name>jenkinsdemoapp</name>
     <description>jenkinsdemoapp</description>
