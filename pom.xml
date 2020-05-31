@@ -20,8 +20,45 @@
 
  
     <build>
-        <plugins>		 
-            <!-- Deploy to Cloudhub -->
+   <plugins>
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-app-maven-plugin</artifactId>
+				<version>${mule.tools.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+                    <copyToAppsDirectory>true</copyToAppsDirectory>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>add-resource</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>add-resource</goal>
+						</goals>
+						<configuration>
+							<resources>
+								<resource>
+									<directory>src/main/app/</directory>
+								</resource>
+								<resource>
+									<directory>src/main/api/</directory>
+								</resource>
+								<resource>
+									<directory>mappings/</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+         <!-- Deploy to Cloudhub -->
          <plugin>
             <groupId>org.mule.tools.maven</groupId>
             <artifactId>mule-maven-plugin</artifactId>
@@ -30,10 +67,10 @@
 		        <cloudHubDeployment>
 		            <uri>https://anypoint.mulesoft.com</uri>
 		            <muleVersion>${mule.version}</muleVersion>
-		            <username>hexa</username>
-		            <password>Printout452009</password>
-		            <applicationName>jenkinsdemoapp</applicationName>
-		            <environment>Sandbox</environment>
+		            <username>${anypoint.username}</username>
+		            <password>${anypoint.password}</password>
+		            <applicationName>mulesoft-jenkins-ci-cd</applicationName>
+		            <environment>${anypoint.environment}</environment>
 		            <properties>
 		                <key>value</key>
 		            </properties>
@@ -49,8 +86,6 @@
                </execution>
             </executions>
          </plugin>
-		 
-		 
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-deploy-plugin</artifactId>
@@ -58,9 +93,7 @@
                <skip>true</skip>
             </configuration>
          </plugin>
-		 
-		 
-        </plugins>
+		</plugins>
     </build>
 
   <distributionManagement>
