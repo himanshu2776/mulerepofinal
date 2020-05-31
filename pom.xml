@@ -34,7 +34,7 @@
 				<username>hexa</username>
 				<environment>Sandbox</environment>
 				<workers>1</workers>
-				<workerType>Micro</workerType>
+				<workerType>MICRO</workerType>
 				<applicationName>test-Demo</applicationName>
 				<password>Printout452009</password>
 				<muleVersion>4.3.0</muleVersion>
