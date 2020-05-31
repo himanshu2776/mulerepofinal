@@ -3,68 +3,121 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.company</groupId>
-    <artifactId>custpol2</artifactId>
-    <version>3.0.0</version>
+    <artifactId>jenkinsdemo</artifactId>
+    <version>1.0.0</version>
+	<packaging>mule</packaging>
 
-    <name>custpol2</name>
-    <description>custpol2</description>
+    <name>jenkinsdemoapp</name>
+    <description>jenkinsdemoapp</description>
 
-    <packaging>jar</packaging>
+       <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<mule.version>4.3.0</mule.version>
+		<mule.tools.version>1.7</mule.tools.version>
+	</properties>
 
-    <properties>
-        <mule.maven.plugin.version>3.2.7</mule.maven.plugin.version>
-        <exchange.url>https://maven.anypoint.mulesoft.com/api/v1/organizations/e38d5c94-0642-45a9-aca0-2c2e36d4242e/maven</exchange.url>
-    </properties>
-
-
-<!--<repositories>
-<repository>
-<id>Repository</id>
-<name>MuleSoft Exchange Environment</name>
-<url>${exchange.url}</url>
-<snapshots>
-<enabled>true</enabled>
-</snapshots>
-</repository>
-</repositories> -->
+ 
     <build>
         <plugins>
-         <!--   <plugin>
-                <groupId>org.mule.tools.maven</groupId>
-                <artifactId>mule-maven-plugin</artifactId>
-                <version>${mule.maven.plugin.version}</version>
-                <extensions>true</extensions>
-            </plugin> -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-				<version>2.8.2</version>
-                <executions>
-                    <execution>
-                   <!--     <id>upload-template</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals> -->
-                        <configuration>
-                         <cloudHubDeployment>
-						    <repositoryId>exchange-server</repositoryId>
-<uri>https://anypoint.mulesoft.com/</uri>
-      <muleVersion>4.3.0</muleVersion>
-      <username>hexa</username>
-      <password>Printout452009</password>
-      <applicationName>custpol2</applicationName>
-      <environment>Sandbox</environment>
-	  <workers>1</workers>
-	  <workerType>Micro</workerType>
-  </cloudHubDeployment>
-  
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+        <plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-app-maven-plugin</artifactId>
+				<version>${mule.tools.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+                    <copyToAppsDirectory>true</copyToAppsDirectory>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>add-resource</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>add-resource</goal>
+						</goals>
+						<configuration>
+							<resources>
+								<resource>
+									<directory>src/main/app/</directory>
+								</resource>
+								<resource>
+									<directory>src/main/api/</directory>
+								</resource>
+								<resource>
+									<directory>mappings/</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			
+			  <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>properties-maven-plugin</artifactId>
+            <version>1.0.0</version>
+            <executions>
+               <execution>
+                  <phase>initialize</phase>
+                  <goals>
+                     <goal>read-project-properties</goal>
+                  </goals>
+                  <configuration>
+                     <files>
+                        <file>src/main/resources/jenkins.properties</file>
+                     </files>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin>
+         <!-- Deploy to Cloudhub -->
+         <plugin>
+		 
+		 
+            <!-- Deploy to Cloudhub -->
+         <plugin>
+            <groupId>org.mule.tools.maven</groupId>
+            <artifactId>mule-maven-plugin</artifactId>
+            <version>2.3.2</version>
+            <configuration>
+		        <cloudHubDeployment>
+		            <uri>https://anypoint.mulesoft.com</uri>
+		            <muleVersion>${mule.version}</muleVersion>
+		            <username>hexa</username>
+		            <password>Printout452009</password>
+		            <applicationName>jenkinsdemoapp</applicationName>
+		            <environment>Sandbox</environment>
+		            <properties>
+		                <key>value</key>
+		            </properties>
+		        </cloudHubDeployment>
+		    </configuration>
+           	<executions>
+               <execution>
+                  <id>deploy</id>
+                  <phase>deploy</phase>
+                  <goals>
+                     <goal>deploy</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <configuration>
+               <skip>true</skip>
+            </configuration>
+         </plugin>
+		 
+		 
         </plugins>
     </build>
 
@@ -77,11 +130,32 @@
         </repository>
     </distributionManagement>
 
-  <!--  <pluginRepositories>
+  <repositories>
+          <repository>
+            <id>Repository</id>
+            <name>Central</name>
+            <url>http://repo1.maven.org/maven2/</url>
+            <layout>default</layout>
+        </repository>
+		
+        <repository>
+            <id>mulesoft-releases</id>
+            <name>MuleSoft Releases Repository</name>
+            <url>http://repository.mulesoft.org/releases/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+	
+    <pluginRepositories>
         <pluginRepository>
-            <id>mule-plugin</id>
-            <name>Mule Repository</name>
-            <url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
+            <id>mulesoft-release</id>
+            <name>mulesoft release repository</name>
+            <layout>default</layout>
+            <url>http://repository.mulesoft.org/releases/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
         </pluginRepository>
-    </pluginRepositories> -->
+    </pluginRepositories>
+	
 </project>
