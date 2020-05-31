@@ -12,7 +12,7 @@
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
+   <exchange.url>https://maven.anypoint.mulesoft.com/api/v1/organizations/e38d5c94-0642-45a9-aca0-2c2e36d4242e/maven</exchange.url>
 		<app.runtime>4.3.0</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	</properties>
