@@ -53,7 +53,7 @@
       <muleVersion>4.3.0</muleVersion>
       <username>hexa</username>
       <password>Printout452009</password>
-      <applicationName>democode</applicationName>
+      <applicationName>custpol</applicationName>
       <environment>Sandbox</environment>
 	  <workers>1</workers>
 	  <workerType>Micro</workerType>
