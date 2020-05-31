@@ -19,7 +19,7 @@
     </properties>
 
 
-<!--<repositories>
+<repositories>
 <repository>
 <id>Repository</id>
 <name>MuleSoft Exchange Environment</name>
@@ -28,7 +28,7 @@
 <enabled>true</enabled>
 </snapshots>
 </repository>
-</repositories> -->
+</repositories>
     <build>
         <plugins>
          <!--   <plugin>
