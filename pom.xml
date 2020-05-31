@@ -11,7 +11,7 @@
     <name>custpol</name>
     <description>custpol</description>
 
-    <packaging>mule-policy</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <mule.maven.plugin.version>3.2.7</mule.maven.plugin.version>
