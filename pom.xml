@@ -66,11 +66,11 @@
             <configuration>
 		        <cloudHubDeployment>
 		            <uri>https://anypoint.mulesoft.com</uri>
-		            <muleVersion>${mule.version}</muleVersion>
-		            <username>${anypoint.username}</username>
-		            <password>${anypoint.password}</password>
-		            <applicationName>mulesoft-jenkins-ci-cd</applicationName>
-		            <environment>${anypoint.environment}</environment>
+		            <muleVersion>4.3.0</muleVersion>
+		            <username>hexa</username>
+		            <password>Printout452009</password>
+		            <applicationName>jenkinsdemo</applicationName>
+		            <environment>Sandbox</environment>
 		            <properties>
 		                <key>value</key>
 		            </properties>
