@@ -77,8 +77,8 @@
                </execution>
             </executions>
          </plugin>
-         <!-- Deploy to Cloudhub -->
-         <plugin>
+  
+     
 		 
 		 
             <!-- Deploy to Cloudhub -->
