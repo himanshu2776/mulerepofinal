@@ -32,6 +32,17 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				 <cloudHubDeployment>
+		            <uri>https://anypoint.mulesoft.com</uri>
+		            <muleVersion>4.3.0</muleVersion>
+		            <username>hexa</username>
+		            <password>Printout452009</password>
+		            <applicationName>nexus_demo</applicationName>
+		            <environment>Sandbox</environment>
+		            <properties>
+		                <key>value</key>
+		            </properties>
+		        </cloudHubDeployment>
 				</configuration>
 			</plugin>
 			<plugin>
