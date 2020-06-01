@@ -100,7 +100,7 @@
 		</dependency>
 	</dependencies>
 
-	<distributionManagement>
+	<!--<distributionManagement>
 		<repository>
 			<id>releases</id>
 			<name>releases</name>
@@ -111,7 +111,7 @@
 			<id>releases</id>
 			<url>http://localhost:8089/nexus/content/repositories/releases/</url>
 		</snapshotRepository>
-	</distributionManagement>
+	</distributionManagement> -->
 
 
 	<repositories>
