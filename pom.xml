@@ -62,7 +62,7 @@
                <skip>true</skip>
             </configuration>
          </plugin>
-			<plugin>
+			<!--<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
 				<version>1.5.1</version>
@@ -80,8 +80,8 @@
 					<nexusUrl>http://localhost:8089/nexus/</nexusUrl>
 					<skipStaging>true</skipStaging>
 				</configuration>
-
-			</plugin>
+ 
+			</plugin> -->
 		</plugins>
 	</build>
 
