@@ -7,7 +7,7 @@
 	<groupId>com.demo</groupId>
 	<artifactId>nexus_demo</artifactId>
 	<version>1.0.0</version>
-	<packaging>mule-application</packaging>
+	<packaging>mule</packaging>
 
 	<name>test_nexus</name>
 
