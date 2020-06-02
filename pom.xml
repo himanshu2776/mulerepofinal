@@ -69,7 +69,7 @@
 </goals>
 <configuration>
 <files>
-<file>src/main/resources/init.properties</file>
+<file>src/main/app/mule-app.properties</file>
 </files>
 </configuration>
 </execution>
