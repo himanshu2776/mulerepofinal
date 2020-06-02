@@ -121,7 +121,8 @@
 	<dependencies>
 
 	</dependencies>
-
+	
+<repositories>
 <repository>
 <id>Central</id>
 <name>Central</name>
@@ -135,6 +136,7 @@
 <layout>default</layout>
 </repository>
 </repositories>
+
 <pluginRepositories>
 <pluginRepository>
 <id>mulesoft-release</id>
