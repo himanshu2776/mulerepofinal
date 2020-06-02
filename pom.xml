@@ -68,9 +68,7 @@
 <goal>read-project-properties</goal>
 </goals>
 <configuration>
-<files>
-<file></file>
-</files>
+
 </configuration>
 </execution>
 </executions>
