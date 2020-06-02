@@ -16,6 +16,17 @@
 		<app.runtime>4.3.0</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	</properties>
+	
+		<distributionManagement>
+		<snapshotRepository>
+			<id>releases</id>
+			<url>http://localhost:8089/nexus/content/repositories/releases/</url>
+		</snapshotRepository>
+		<repository>
+			<id>releases</id>
+			<url>http://localhost:8089/nexus/content/repositories/releases/</url>
+		</repository>
+	</distributionManagement>
 
 	<build>
 		<plugins>
@@ -29,6 +40,29 @@
                     <copyToAppsDirectory>true</copyToAppsDirectory>
 				</configuration>
 			</plugin>
+			
+			
+				
+		<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.5.1</version>
+				<executions>
+					<execution>
+						<id>default-deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<serverId>nexus</serverId>
+					<nexusUrl>http://localhost:8089/nexus/</nexusUrl>
+					<skipStaging>true</skipStaging>
+				</configuration> 
+			</plugin>
+			
 			
 			
 			<plugin>
@@ -69,27 +103,7 @@
             <artifactId>maven-deploy-plugin</artifactId>
             <version>2.8.2</version>
         </plugin>
-		
-		<plugin>
-				<groupId>org.sonatype.plugins</groupId>
-				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.5.1</version>
-				<executions>
-					<execution>
-						<id>default-deploy</id>
-						<phase>deploy</phase>
-						<goals>
-							<goal>deploy</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<serverId>nexus</serverId>
-					<nexusUrl>http://localhost:8089/nexus/</nexusUrl>
-					<skipStaging>true</skipStaging>
-				</configuration>
- 
-			</plugin>
+	
 		 
 		</plugins>
 	</build>
@@ -109,16 +123,7 @@
         </dependency>
 	</dependencies>
 	
-	<distributionManagement>
-		<snapshotRepository>
-			<id>releases</id>
-			<url>http://localhost:8089/nexus/content/repositories/releases/</url>
-		</snapshotRepository>
-		<repository>
-			<id>releases</id>
-			<url>http://localhost:8089/nexus/content/repositories/releases/</url>
-		</repository>
-	</distributionManagement>
+
 	
 
 	<repositories>
