@@ -19,8 +19,7 @@
 
 	<build>
 		<plugins>
-		
-			
+					
 				<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-app-maven-plugin</artifactId>
