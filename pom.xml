@@ -7,7 +7,7 @@
 	<groupId>com.demo</groupId>
 	<artifactId>nexus_demo</artifactId>
 	<version>1.0.4</version>
-	<packaging>mule</packaging>
+	<packaging>mule-application</packaging>
 
 	<name>test_nexus</name>
 
@@ -38,7 +38,8 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>2.1</version>
+				<version>3.3.5</version>
+					<!--<version>2.1</version> -->
 				<extensions>true</extensions>
 				<configuration>
 				 <cloudHubDeployment>
