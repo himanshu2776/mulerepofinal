@@ -47,6 +47,8 @@
 		            <username>hexa</username>
 		            <password>Printout452009</password>
 		            <applicationName>nexus_demo</applicationName>
+					<workers>1</workers>
+					<workerType>Micro</workerType>
 		            <environment>Sandbox</environment>
 		            <properties>
 		                <key>value</key>
