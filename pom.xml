@@ -7,7 +7,7 @@
 	<groupId>com.new</groupId>
 	<artifactId>test_demo</artifactId>
 	<version>1.0.0</version>
-	<packaging>mule</packaging>
+	<packaging>mule-application</packaging>
 	<name>test_demo</name>
 
 	<properties>
