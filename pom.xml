@@ -93,6 +93,9 @@
     <repository>
        <id>mulesoft-releases</id>
             <name>MuleSoft Releases Repository</name>
+			        <username>hexa</username>
+		            <password>Printout452009</password>
+		            <applicationName>last</applicationName>
             <url>https://repository.mulesoft.org/releases/</url>
     </repository>
 </distributionManagement>
