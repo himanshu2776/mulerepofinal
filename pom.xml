@@ -125,7 +125,6 @@
            <name>mulesoft release repository</name>
                <layout>default</layout>
                  <url>http://repository.mulesoft.org/releases/</url>
-			<layout>default</layout>
 		</repository>
 		<!--<snapshotRepository>
 			<id>releases</id>
