@@ -89,12 +89,16 @@
 	</dependencies>
 	
 	<distributionManagement>
-    <repository>
-       <id>mulesoft-releases</id>
-            <name>MuleSoft Releases Repository</name>
-            <url>https://repository.mulesoft.org/releases/</url>
-    </repository>
-</distributionManagement>
+		<snapshotRepository>
+			<id>Himanshuid</id>
+			<url>http://localhost:8089/nexus/content/repositories/releases/</url>
+		</snapshotRepository>
+		<repository>
+			<id>Himanshuid</id>
+			<url>http://localhost:8089/nexus/content/repositories/releases/</url>
+		</repository>
+	</distributionManagement>
+	
 
 	<repositories>
           <repository>
