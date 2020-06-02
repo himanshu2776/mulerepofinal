@@ -84,6 +84,15 @@
             <classifier>mule-plugin</classifier>
         </dependency>
 	</dependencies>
+	
+	
+	<distributionManagement>
+    <repository>
+       <id>mulesoft-releases</id>
+            <name>MuleSoft Releases Repository</name>
+            <url>https://repository.mulesoft.org/releases/</url>
+    </repository>
+</distributionManagement>
 
 	<repositories>
           <repository>
