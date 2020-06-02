@@ -88,7 +88,6 @@
         </dependency>
 	</dependencies>
 	
-	
 	<distributionManagement>
     <repository>
        <id>mulesoft-releases</id>
