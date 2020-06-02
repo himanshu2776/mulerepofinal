@@ -115,6 +115,25 @@
 			<url>http://localhost:8089/nexus/content/repositories/releases/</url>
 		</snapshotRepository>
 	</distributionManagement> -->
+	
+	
+	
+	
+	<distributionManagement>
+		<repository>
+		<id>mulesoft-release</id>
+           <name>mulesoft release repository</name>
+               <layout>default</layout>
+                 <url>http://repository.mulesoft.org/releases/</url>
+			<layout>default</layout>
+		</repository>
+		<!--<snapshotRepository>
+			<id>releases</id>
+			<url>http://localhost:8089/nexus/content/repositories/releases/</url>
+		</snapshotRepository> -->
+	</distributionManagement>
+	
+	
 
 
 	<repositories>
