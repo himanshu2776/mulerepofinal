@@ -90,11 +90,11 @@
 	
 	<distributionManagement>
 		<snapshotRepository>
-			<id>Himanshuid</id>
+			<id>releases</id>
 			<url>http://localhost:8089/nexus/content/repositories/releases/</url>
 		</snapshotRepository>
 		<repository>
-			<id>Himanshuid</id>
+			<id>releases</id>
 			<url>http://localhost:8089/nexus/content/repositories/releases/</url>
 		</repository>
 	</distributionManagement>
