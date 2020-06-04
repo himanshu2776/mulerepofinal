@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>last</artifactId>
-    <version>1.0.1</version>
+	<artifactId>deplast</artifactId>
+    <version>1.0.2</version>
     <packaging>mule-application</packaging>
-	<name>last</name>
+	<name>deplast</name>
 
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -89,11 +89,12 @@
 				<extensions>true</extensions>
 				<configuration>
 				 <cloudHubDeployment>
+				    <objectStoreV2>true</objectStoreV2>
 		            <uri>https://anypoint.mulesoft.com</uri>
 		            <muleVersion>4.3.0</muleVersion>
 		            <username>hexa</username>
 		            <password>Printout452009</password>
-		            <applicationName>last</applicationName>
+		            <applicationName>deplast</applicationName>
 					<workers>1</workers>
 					<workerType>Micro</workerType>
 		            <environment>Sandbox</environment>

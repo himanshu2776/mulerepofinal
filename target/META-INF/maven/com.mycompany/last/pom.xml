@@ -17,7 +17,7 @@
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	</properties>
 	
-		<!--<distributionManagement>
+		<distributionManagement>
 		<snapshotRepository>
 			<id>releases</id>
 			<url>http://localhost:8089/nexus/content/repositories/releases/</url>
@@ -26,19 +26,19 @@
 			<id>releases</id>
 			<url>http://localhost:8089/nexus/content/repositories/releases/</url>
 		</repository>
-	</distributionManagement> -->
+	</distributionManagement>
 	
 	
-	<distributionManagement>
+	<!--<distributionManagement>
 		<snapshotRepository>
 			 <id>mule-public</id>
            <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
 		</snapshotRepository>
-		<repository>
+		<repository>                                                      //FOR CLOUDHUB
 			 <id>mule-public</id>
            <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
 		</repository>
-	</distributionManagement> 
+	</distributionManagement>  -->
 
 	<build>
 		<plugins>
@@ -47,11 +47,11 @@
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-app-maven-plugin</artifactId>
 				<version>1.7</version>
-				<extensions>true</extensions>
+				<extensions>true</extensions>           //NOT ALLOWED ANYWHERE
 				<configuration>
                     <copyToAppsDirectory>true</copyToAppsDirectory>
 				</configuration>
-			</plugin> -->
+			</plugin> -->   
 			
 			
 				
@@ -89,6 +89,7 @@
 				<extensions>true</extensions>
 				<configuration>
 				 <cloudHubDeployment>
+				    <objectStoreV2>true</objectStoreV2>
 		            <uri>https://anypoint.mulesoft.com</uri>
 		            <muleVersion>4.3.0</muleVersion>
 		            <username>hexa</username>
