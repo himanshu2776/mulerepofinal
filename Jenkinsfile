@@ -27,7 +27,9 @@ steps {
 }
 
 stage("Deploy Application to nexus repository"){
-
+environment {
+        NEXUS_CREDENTIALS = credentials("nexus.credentials") 
+      }
 steps {
  bat 'mvn clean deploy -Dmaven.test.skip=true'
 }
