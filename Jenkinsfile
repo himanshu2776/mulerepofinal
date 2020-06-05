@@ -22,7 +22,7 @@ environment {
         ANYPOINT_CREDENTIALS = credentials("anypoint.credentials") 
       }
 steps {
- bat 'package deploy -DmuleDeploy -Dusername=hexa -Dpassword=Printout452009 -Denvironment=Sandbox -Dmule.version=4.3.0'
+ bat 'mvn package deploy -DmuleDeploy -Dusername=hexa -Dpassword=Printout452009 -Denvironment=Sandbox -Dmule.version=4.3.0'
 }
 }
 }
