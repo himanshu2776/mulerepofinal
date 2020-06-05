@@ -11,7 +11,7 @@ environment {
         ANYPOINT_CREDENTIALS = credentials("anypoint.credentials") 
       }
 steps {
-echo 'This is a minimal pipeline.'
+echo 'mvn clean install'
 }
 }
 
@@ -20,7 +20,7 @@ environment {
         ANYPOINT_CREDENTIALS = credentials("anypoint.credentials") 
       }
 steps {
- echo 'This is a other pipeline.'
+ echo 'mvn clean package deploy -Danypoint.username=hexa -Danypoint.password=Printout452009 -Danypoint.environment=Sandbox'
 }
 
 }
