@@ -10,7 +10,7 @@ environment {
         ANYPOINT_CREDENTIALS = credentials("anypoint.credentials") 
       }
 steps {
-echo 'mvn clean install'
+bat 'mvn clean install'
 }
 }
 
@@ -19,7 +19,7 @@ environment {
         ANYPOINT_CREDENTIALS = credentials("anypoint.credentials") 
       }
 steps {
- echo 'mvn clean package deploy -Danypoint.username=hexa -Danypoint.password=Printout452009 -Danypoint.environment=Sandbox'
+ bat 'mvn clean package deploy -Danypoint.username=hexa -Danypoint.password=Printout452009 -Danypoint.environment=Sandbox'
 }
 }
 }
