@@ -6,23 +6,23 @@ agent any
 
 stages{
 
-stage{'Build Application'}
+stage{"Build Application"}
 
 {
 environment {
-        ANYPOINT_CREDENTIALS = credentials('anypoint.credentials') 
+        ANYPOINT_CREDENTIALS = credentials("anypoint.credentials") 
       }
 steps{
- 'mvn clean install'
+ "mvn clean install"
 }
 }
 
-stage{'Deploy Application to mulesoft cloudhub'}{
+stage{"Deploy Application to mulesoft cloudhub"}{
 environment {
-        ANYPOINT_CREDENTIALS = credentials('anypoint.credentials') 
+        ANYPOINT_CREDENTIALS = credentials("anypoint.credentials") 
       }
 steps{
- 'mvn package deploy -DmuleDeploy -Dusername=hexa -Dpassword=Printout452009 -Denvironment=Sandbox -Dmule.version=4.3.0'
+ "mvn package deploy -DmuleDeploy -Dusername=hexa -Dpassword=Printout452009 -Denvironment=Sandbox -Dmule.version=4.3.0"
 }
 
 }
