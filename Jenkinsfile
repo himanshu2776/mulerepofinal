@@ -25,9 +25,6 @@ steps{
 bat 'package deploy -DmuleDeploy -Dusername=hexa -Dpassword=Printout452009 -Denvironment=Sandbox -Dmule.version=4.3.0'
 }
 
-stage('git clone') {
-      git clone "https://github.com/himanshu2776/mulerepofinal.git"
-    }
 }
 }
 
