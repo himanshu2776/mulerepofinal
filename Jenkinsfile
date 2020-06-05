@@ -1,7 +1,6 @@
 pipeline
 {
 
-agent any
 tools { 
       'Maven-3.6.3'
     }
