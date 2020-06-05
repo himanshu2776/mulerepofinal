@@ -25,6 +25,14 @@ steps {
  bat 'mvn package deploy -DmuleDeploy -Dusername=hexa -Dpassword=Printout452009 -Denvironment=Sandbox -Dmule.version=4.3.0'
 }
 }
+
+stage("Deploy Application to nexus repository"){
+
+steps {
+ bat 'mvn clean deploy -Dmaven.test.skip=true'
 }
 }
+}
+}
+
 
