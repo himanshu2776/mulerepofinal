@@ -6,7 +6,7 @@ agent any
 
 stages{
 
-stage("Build Application")
+stage{"Build Application"}
 
 {
 environment {
@@ -17,7 +17,7 @@ steps{
 }
 }
 
-stage("Deploy Application to mulesoft cloudhub"){
+stage{"Deploy Application to mulesoft cloudhub"}{
 environment {
         ANYPOINT_CREDENTIALS = credentials("anypoint.credentials") 
       }
