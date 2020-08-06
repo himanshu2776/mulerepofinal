@@ -5,7 +5,7 @@
 
 	<groupId>com.mycompany</groupId>
 	<artifactId>deplast</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <packaging>mule-application</packaging>
 	<name>deplast</name>
     <properties>
@@ -16,7 +16,7 @@
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	</properties>
 	
-		<distributionManagement>
+		<!--<distributionManagement>
 		<snapshotRepository>
 			<id>releases</id>
 			<url>http://localhost:8089/nexus/content/repositories/releases/</url>
@@ -25,19 +25,19 @@
 			<id>releases</id>
 			<url>http://localhost:8089/nexus/content/repositories/releases/</url>
 		</repository>
-	</distributionManagement>
+	</distributionManagement> -->
 	
 	
-	<!--<distributionManagement>
+	<distributionManagement>
 		<snapshotRepository>
 			 <id>mule-public</id>
            <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
 		</snapshotRepository>
-		<repository>                                                      //FOR CLOUDHUB
+		<repository>                                                   
 			 <id>mule-public</id>
            <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
 		</repository>
-	</distributionManagement>  -->
+	</distributionManagement>  
 
 	<build>
 		<plugins>
